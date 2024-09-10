@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -20,8 +21,8 @@ public class Expense {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
     public String description;
-    @Column(nullable = false)
-    public Double value;
+    @Column(nullable = false, precision = 19, scale = 2)
+    public BigDecimal price;
     public String place;
     public Date expenseDate;
 

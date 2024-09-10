@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.sql.Date;
 
 @Entity
+@Table(name = "app_user")
 @Getter
 @Setter
 @Builder
